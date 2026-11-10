@@ -1,0 +1,232 @@
+/* ===== Coffee & Off-white Theme ===== */
+:root {
+    --off-white: #F7F3EE;
+    --white: #FFFEFC;
+    --cream: #EFE5DA;
+    --coffee: #795548;
+    --dark-coffee: #4E342E;
+    --text: #3E302B;
+    --muted: #86766F;
+    --border: #DCCFC4;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: var(--coffee);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--dark-coffee);
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ===== Panels ===== */
+.panel {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(78, 52, 46, 0.06);
+}
+
+h2 {
+    color: var(--dark-coffee);
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+/* ===== Form Grid ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* ===== Labels ===== */
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--dark-coffee);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ===== Inputs & Selects ===== */
+input,
+select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--off-white);
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--coffee);
+    box-shadow: 0 0 0 3px rgba(121, 85, 72, 0.12);
+    background: var(--white);
+}
+
+/* ===== Predict Button ===== */
+button {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px;
+    background: var(--coffee);
+    color: var(--white);
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: var(--dark-coffee);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 52, 46, 0.18);
+}
+
+/* ===== Prediction Result ===== */
+.message {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.result {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    color: var(--dark-coffee);
+}
+
+.result h3 {
+    margin-bottom: 5px;
+}
+
+.error {
+    background: #FBE9E7;
+    border: 1px solid #E6B8AE;
+    color: #9B3328;
+}
+
+/* ===== Model Comparison Table ===== */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: var(--dark-coffee);
+    color: var(--white);
+}
+
+th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr {
+    background: var(--off-white);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--cream);
+}
+
+/* ===== Text ===== */
+.muted {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 650px) {
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
